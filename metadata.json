@@ -1,0 +1,6 @@
+{
+  "name": "Emerald Ledger",
+  "description": "Bilingual (English & Gaeilge) financial literacy and Bitcoin education platform featuring on-chain Bitcoin address DCA & ROI analytics, the complete 2008 Satoshi Whitepaper, 50/30/20 budgeting, Irish tax calculators, and scam defense.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

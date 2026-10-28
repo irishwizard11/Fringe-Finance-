@@ -1,0 +1,279 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F4F6F9;
+    color: #0A192F;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  html.dark body {
+    background-color: #060E1E;
+    color: #F8FAFC;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Google Material 3 Standard Button System — Aligned & Contained Inside Shapes */
+.btn-google-filled,
+.btn-google-amber,
+.btn-google-tonal,
+.btn-google-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-align: center;
+  max-width: 100%;
+  min-height: 2.25rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-google-filled > svg,
+.btn-google-amber > svg,
+.btn-google-tonal > svg,
+.btn-google-outlined > svg {
+  flex-shrink: 0;
+}
+
+.btn-google-filled {
+  padding: 0.5625rem 1.25rem;
+  background-color: #006B3F;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(10, 25, 47, 0.12);
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), box-shadow 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-google-filled:hover {
+  background-color: #005834;
+  box-shadow: 0 2px 6px rgba(0, 107, 63, 0.28);
+}
+.btn-google-filled:active {
+  transform: scale(0.98);
+}
+
+.btn-google-amber {
+  padding: 0.5625rem 1.25rem;
+  background-color: #F7931A;
+  color: #0A192F;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(10, 25, 47, 0.15);
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), box-shadow 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-google-amber:hover {
+  background-color: #e6830d;
+  box-shadow: 0 2px 8px rgba(247, 147, 26, 0.35);
+}
+.btn-google-amber:active {
+  transform: scale(0.98);
+}
+
+.btn-google-tonal {
+  padding: 0.5rem 1.125rem;
+  background-color: #E6F2ED;
+  color: #006B3F;
+  border: 1px solid transparent;
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms cubic-bezier(0.2, 0, 0, 1), color 150ms cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-google-tonal:hover {
+  background-color: #D2E8DF;
+}
+.btn-google-tonal:active {
+  transform: scale(0.98);
+}
+html.dark .btn-google-tonal {
+  background-color: rgba(0, 107, 63, 0.25);
+  color: #34D399;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+html.dark .btn-google-tonal:hover {
+  background-color: rgba(0, 107, 63, 0.38);
+}
+
+.btn-google-outlined {
+  padding: 0.5rem 1.125rem;
+  background-color: #FFFFFF;
+  color: #0A192F;
+  border: 1px solid #CBD5E1;
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms cubic-bezier(0.2, 0, 0, 1), border-color 150ms cubic-bezier(0.2, 0, 0, 1), color 150ms cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-google-outlined:hover {
+  background-color: #F8FAFC;
+  border-color: #94A3B8;
+}
+.btn-google-outlined:active {
+  transform: scale(0.98);
+}
+html.dark .btn-google-outlined {
+  background-color: #0F2342;
+  color: #F8FAFC;
+  border-color: #1E3A5F;
+}
+html.dark .btn-google-outlined:hover {
+  background-color: #162F54;
+  border-color: #334155;
+}
+
+input[type="range"] {
+  accent-color: #006B3F;
+}
+
+input[type="range"].accent-bitcoin {
+  accent-color: #F7931A;
+}
+
+/* Deep Navy Night Mode Global Adaptive Overrides for Existing Components */
+html.dark .bg-\[\#F4F6F9\] {
+  background-color: #060E1E;
+}
+
+html.dark .bg-white {
+  background-color: #0A192F;
+}
+
+html.dark .bg-white\/90 {
+  background-color: rgba(10, 25, 47, 0.92);
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/80,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-100 {
+  background-color: #0F2342;
+}
+
+html.dark .bg-slate-200,
+html.dark .bg-slate-200\/80,
+html.dark .bg-slate-200\/90 {
+  background-color: #172E52;
+}
+
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/60 {
+  background-color: rgba(247, 147, 26, 0.12);
+}
+
+html.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.14);
+}
+
+html.dark .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.14);
+}
+
+html.dark .text-\[\#0A192F\] {
+  color: #F8FAFC;
+}
+
+/* Preserve dark navy text on bright amber/gold surfaces in Night Mode */
+html.dark .bg-\[\#F7931A\] .text-\[\#0A192F\],
+html.dark .bg-\[\#F7931A\].text-\[\#0A192F\],
+html.dark .btn-google-amber {
+  color: #0A192F;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-800 {
+  color: #E2E8F0;
+}
+
+html.dark .text-slate-600 {
+  color: #CBD5E1;
+}
+
+html.dark .text-slate-500 {
+  color: #94A3B8;
+}
+
+html.dark .text-\[\#006B3F\] {
+  color: #34D399;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/60,
+html.dark .border-slate-300 {
+  border-color: #1E3A5F;
+}
+
+html.dark .divide-slate-100 > :not(:last-child),
+html.dark .divide-slate-200 > :not(:last-child) {
+  border-color: #1E3A5F;
+}
+
+html.dark input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+html.dark select {
+  background-color: #060E1E;
+  color: #F8FAFC;
+  border-color: #1E3A5F;
+}
+
+html.dark input::placeholder {
+  color: #64748B;
+}
+
+/* Android & iOS Mobile Ergonomics & Touch Optimization */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overscroll-behavior-y: none;
+}
+
+/* Prevent iOS Safari auto-zoom on form focus by ensuring 16px minimum font size on small screens */
+@media (max-width: 640px) {
+  input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Larger 24px Touch-Friendly Range Slider Thumbs for iOS & Android */
+input[type="range"] {
+  height: 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.safe-area-pb {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+
